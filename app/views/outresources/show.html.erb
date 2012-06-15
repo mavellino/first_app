@@ -1,0 +1,21 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Nome:</b>
+  <%= @outresource.name %>
+</p>
+
+<p>
+  <b>Descrizione:</b>
+  <%= @outresource.descr %>
+</p>
+
+
+
+
+
+<%= link_to 'Edit', edit_outresource_path(@outresource) %>
+<%= link_to 'Back', outresources_path %>
+
+<h2>Visualizza Elenco Risorse Interne</h2>
+<%= link_to 'Visualizza', outresource_inresources_path(@outresource) %>

@@ -1,0 +1,26 @@
+<%= form_for(@outresource) do |f| %>
+  <% if @outresource.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@outresource.errors.count, "error") %> prohibited this Risorsa Esterna from being saved:</h2>
+
+      <ul>
+      <% @outresource.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :descr %><br />
+    <%= f.text_field :descr %>
+  </div>
+  
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

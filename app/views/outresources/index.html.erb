@@ -1,0 +1,26 @@
+<h1>Listing Risorsa Esterna</h1>
+
+<table>
+  <tr>
+    <th>Nome</th>
+    <th>Descrizione</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @outresources.each do |outresource| %>
+  <tr>
+    <td><%= outresource.name %></td>
+    <td><%= outresource.descr %></td>
+
+    <td><%= link_to 'Show', outresource %></td>
+    <td><%= link_to 'Edit', edit_outresource_path(outresource) %></td>
+    <td><%= link_to 'Destroy', outresource, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'Nuova Risorsa Esterna', new_outresource_path %>

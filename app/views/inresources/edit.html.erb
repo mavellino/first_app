@@ -1,0 +1,19 @@
+<h1>Editing Risorsa Interna</h1>
+<%= debug @inresource.outresource%>
+<%= debug @inresource%>
+
+<%= form_for [@inresource.outresource,@inresource] do |f| %>
+  <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :descr %><br />
+    <%= f.text_area :descr %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
+
+<%= link_to 'Back', outresource_inresources_path(@outresource) %>

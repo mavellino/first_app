@@ -1,0 +1,15 @@
+  <p>
+    <b>Nome Risorsa Interna:</b>
+    <%= inresource.name %>
+  </p>
+ 
+  <p>
+    <b>Descrizione Risorsa Interna:</b>
+    <%= inresource.descr %>
+  </p>
+  
+  <p>
+  <%= link_to 'Destroy Risorsa Interna', [inresource.outresource, inresource],
+               :confirm => 'Are you sure?',
+               :method => :delete %>
+</p>

@@ -1,0 +1,31 @@
+<h1>Listing Risorsa Interna</h1>
+
+<table>
+  <tr>
+    <th>Nome</th>
+    <th>Descrizione</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @inresources.each do |inresource| %>
+  <tr>
+    <td><%= inresource.name %></td>
+    <td><%= inresource.descr %></td>
+
+    <td><%= link_to 'Show', outresource_inresource_path(inresource.outresource, inresource) %></td>
+    <td><%= link_to 'Edit', edit_outresource_inresource_path(inresource.outresource, inresource) %></td>
+    <td><%= link_to 'Delete', outresource_inresource_path(inresource.outresource, inresource), :confirm => 'Are you sure?',:method => :delete %></td>
+  </tr>
+  
+  
+<% end %>
+</table>
+
+<%= link_to 'Aggiungi Nuova Risorsa Interna', new_outresource_inresource_path %>
+
+
+<br />
+
+

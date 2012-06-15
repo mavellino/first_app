@@ -1,0 +1,2 @@
+module InresourcesHelper
+end
